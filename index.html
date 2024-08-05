@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor FAQs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #301534;
+            --secondary-color: #AD28EB;
+            --text-color: #8B6990;
+            --background-color: #F8EEFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-image: var(assets\images\background-pattern-desktop.svg);
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .faq-container {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .faq-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-left: 24px;
+        }
+
+        .faq-header svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--text-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--secondary-color);
+        }
+
+        .faq-question svg {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-top: 20px;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 24px;
+            }
+
+            .faq-header h1 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <header class="faq-header">
+            <svg width="40" height="41" xmlns="http://www.w3.org/2000/svg"><path d="M37.403 18.989L20.571 2.157a5.252 5.252 0 0 0-7.428 0L-3.689 18.989a5.252 5.252 0 0 0 0 7.428l16.832 16.832a5.252 5.252 0 0 0 7.428 0l16.832-16.832a5.252 5.252 0 0 0 0-7.428Z" fill="#AD28EB"/></svg>
+            <h1>FAQs</h1>
+        </header>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0">
+                    What is Frontend Mentor, and how will it help me?
+                    <svg width="30" height="31" xmlns="http://www.w3.org/2000/svg"><path d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a1.557 1.557 0 0 1 0-3.114h9.375a1.557 1.557 0 0 1 0 3.114Z" fill="#AD28EB"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0">
+                    Is Frontend Mentor free?
+                    <svg width="30" height="31" xmlns="http://www.w3.org/2000/svg"><path d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a1.557 1.557 0 0 1 0-3.114h9.375a1.557 1.557 0 0 1 0 3.114Z" fill="#AD28EB"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, Frontend Mentor offers both free and premium coding challenges. The free tier provides access to a wide range of projects, while the premium tier offers additional features and more complex challenges.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0">
+                    Can I use Frontend Mentor projects in my portfolio?
+                    <svg width="30" height="31" xmlns="http://www.w3.org/2000/svg"><path d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a1.557 1.557 0 0 1 0-3.114h9.375a1.557 1.557 0 0 1 0 3.114Z" fill="#AD28EB"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! The projects are designed to help you build your portfolio. We encourage you to customize and expand upon the challenges to showcase your unique skills and creativity.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0">
+                    How can I get help if I'm stuck on a challenge?
+                    <svg width="30" height="31" xmlns="http://www.w3.org/2000/svg"><path d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a1.557 1.557 0 0 1 0-3.114h9.375a1.557 1.557 0 0 1 0 3.114Z" fill="#AD28EB"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Frontend Mentor has a supportive community. You can ask for help in the community forum, join our Discord server, or reach out to fellow developers working on the same challenge. Remember, learning often happens when overcoming obstacles!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => toggleFAQ(item));
+                question.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleFAQ(item);
+                    }
+                });
+            });
+
+            function toggleFAQ(item) {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(faqItem => faqItem.classList.remove('active'));
+                
+                // Toggle the clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
